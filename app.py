@@ -3,7 +3,8 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 
-learn = load_learner(Path('export.pkl'))
+
+learn = load_learner(Path('./export.pkl'))
 
 st.write("""
          # Poisonous/Edible Mushroom Prediction
