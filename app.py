@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 
-learn = load_learner('export.pkl')
+learn = load_learner(Path('export.pkl'))
 
 st.write("""
          # Poisonous/Edible Mushroom Prediction
@@ -23,5 +23,5 @@ else:
     st.image(image, use_column_width=True)
     pred_class,_,_ = learn.predict(image)
     
-    st.write('''It is {}!.  
+    st.write('''It is {}!  
     **PREDICTION NOT ACCURATE PLEASE DO *NOT* CONSUME THE MUSHROOM**'''.format(pred_class))
